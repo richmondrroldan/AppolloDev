@@ -10,10 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'articleController@main');
 
 Route::auth();
 
@@ -22,3 +19,5 @@ Route::get('/home', 'HomeController@index');
 Route::get('/redirect','SocialAuthController@googleRedirect');
 
 Route::get('/callback','SocialAuthController@googleCallback');
+
+Route::resource('profile', 'profileController');

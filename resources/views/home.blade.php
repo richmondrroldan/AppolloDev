@@ -1,17 +1,12 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+@extends('layout')        
+@include('templates/nav')
+        @if(Auth::user()->uType == 1)
+            @section('acontent')
+            @include('admin')
+            @endsection
+        @else
+            @section('content')
+            @include('profile.profile')
+            @endsection
+        @endif  
+@include('templates/footer')
