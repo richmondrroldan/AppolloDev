@@ -1,0 +1,16 @@
+@extends('layout')
+
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    {!! Form::open(array('route' => 'events.store','method'=>'POST')) !!}
+         @include('events.aForm')
+    {!! Form::close() !!}
+@include('templates/footer')
