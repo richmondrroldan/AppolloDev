@@ -20,4 +20,18 @@ Route::get('/redirect','SocialAuthController@googleRedirect');
 
 Route::get('/callback','SocialAuthController@googleCallback');
 
+Route::resource('rWorkshop', 'rWorkshopController');
+
 Route::resource('profile', 'profileController');
+
+Route::resource('articleC', 'articleController');
+
+Route::resource('mentors', 'mentorsController');
+
+Route::resource('skills', 'skillsController');
+
+Route::resource('events', 'eventsController');
+
+Route::resource('rWorkshop', 'rWorkshopController');
+
+Route::resource('aWorkshop', 'adminWorkshopController');
