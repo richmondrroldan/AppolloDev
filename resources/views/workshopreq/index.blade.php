@@ -23,15 +23,6 @@
                             <a href="/skills"><i class="fa fa-tasks fa-fw"></i> Skills</a>
                         </li>
                         <li>                        
-                            <a href="/events"><i class="fa fa-calendar-o fa-fw"></i> Events</a>
-                        </li>
-                        <li>                        
-                            <a href="{{route('articleC.index')}}"><i class="fa fa-edit fa-fw"></i> Articles</a>
-                        </li>
-                        <li>                        
-                            <a href="/#"><i class="fa fa-calendar-o fa-fw"></i> Workshop Request</a>
-                        </li>
-                        <li>                        
                             <a href="/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
 
