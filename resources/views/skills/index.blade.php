@@ -53,7 +53,7 @@
                     <h2>Topic Master List</h2>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn-success" href="{{route('skills.create')}}"> Create New Mentor</a>
+                    <a class="btn btn-success" href="{{route('skills.create')}}"> Create New Skill</a>
                 </div>
             </div>
         </div></br>

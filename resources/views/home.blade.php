@@ -4,9 +4,13 @@
             @section('acontent')
             @include('admin')
             @endsection
-        @else
+        @elseif(Auth::user()->uType == 0)
             @section('content')
             @include('profile.profile')
             @endsection
-        @endif  
+        @else
+        	@section('content')
+            @include('mLanding')
+            @endsection
+        @endif
 @include('templates/footer')
