@@ -22,7 +22,7 @@
                         @endforeach
                         <button type="submit" class="btn btn-default btn-lg span"><span class="network-name">Submit</span></button>
                     {!! Form::close() !!}
-                    
+                    @endforeach      
                      <a href="{{route('profile.edit', Auth::user()->id)}}" class="btn btn-default btn-lg"> <span class="network-name">Edit Profile</span></a>
                 </div>
             </div>
