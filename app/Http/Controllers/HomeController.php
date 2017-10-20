@@ -10,6 +10,7 @@ use App\Mentor;
 use App\Event;
 use App\Article;
 use App\rWorkshop;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -35,6 +36,12 @@ class HomeController extends Controller
         $eventCount = Event::count();
         $mentorCount = Mentor::count();
         $articleCount = Article::count();
-        return view('home', compact('skillCount','mentorCount','eventCount','articleCount','workshopCount'));
+        $skills = Skill::all();
+        $mentors = Mentor::all();
+        return view('home', compact('skillCount','mentorCount','eventCount','articleCount','workshopCount', 'skills', 'mentors'));
+    }
+    public function mLanding(){
+        $skills = Skill::all();
+        return view('mLanding', compact('skills'));
     }
 }
