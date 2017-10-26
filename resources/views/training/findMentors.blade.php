@@ -16,7 +16,7 @@
                                     <div class="form-group">
                                         
                                         {!! Form::model($skills, ['method' => 'GET','route' => ['results.index']]) !!}
-                                        {!! Form::text('skill', null, array('placeholder' => 'Search','class' => 'form-control')) !!}
+                                        {!! Form::text('skill', null , array('placeholder' => 'Search','class' => 'form-control', 'required' => 'required')) !!}
                                         <button type="submit" class="btn btn-default btn-lg span"><span class="network-name">SEARCH</span></button>
                                         {!! Form::close()!!}
 

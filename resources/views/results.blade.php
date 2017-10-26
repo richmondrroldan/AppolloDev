@@ -7,13 +7,13 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="intro-message">
-                    <h3>What do you need?</h3>
+                    <h3>RESULTS</h3>
                     <hr class="intro-divider">
                     <ul class="list-inline intro-social-buttons">
                         <li>
-                        	@foreach($results as $result)
-                            <a href="/mDet/{{$result->id}}" > <span class="network-name">{{$result->name}}</span></a><br><br>
-                        @endforeach
+                            @foreach($results as $result)
+                                <a href="/mDet/{{$result->id}}" > <span class="network-name">{{$result->name}}</span></a><br><br>
+                            @endforeach
                         </li>
                         </br>
                         </br>
