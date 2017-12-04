@@ -13,7 +13,7 @@
                 <a class="navbar-brand topnav network-name pull-right" href="/home">DBOARD</a>
                 @else
                 <a class="navbar-brand topnav network-name" href="/">APPOLLO</a><a class="navbar-brand topnav network-name pull-right" href="/logout">LOGOUT</a>    
-                <a class="navbar-brand topnav network-name pull-right" href="{{ route('profile.show', Auth::user()->id)}}">Profile</a>
+                <a class="navbar-brand topnav network-name pull-right" href="{{ route('profile.show', Auth::user()->id)}}">{{Auth::user()->name}}</a>
                 @endif
 
             </div>

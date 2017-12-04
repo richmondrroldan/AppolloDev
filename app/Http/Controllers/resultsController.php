@@ -22,8 +22,9 @@ class resultsController extends Controller
     public function index()
     {
         $search = Input::get('skill');
-        $results = User::where('name', 'LIKE', "%$search%")
-                    ->orwhere('interests', 'LIKE', "%$search%")->get();
+        $results = User::where('uType', '=', '2')->where('name', 'LIKE', "%$search%")
+                    ->orwhere('interests', 'LIKE', "%$search%")
+                    ->get();
         return view('results', compact('results'));
     }
 
