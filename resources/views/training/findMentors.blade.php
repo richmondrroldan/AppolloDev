@@ -16,7 +16,7 @@
                                     <div class="form-group">
                                         
                                         {!! Form::model($skills, ['method' => 'GET','route' => ['results.index']]) !!}
-<<<<<<< HEAD
+
                                         {!! Form::text('search', null, array('placeholder' => 'Search','class' => 'form-control')) !!}
 
                                         <strong>Expertise:</strong>
@@ -26,9 +26,7 @@
                                         <option value="{{ $skill->title }}">{{ $skill->title }}</option>
                                         @endforeach
                                         </select>
-=======
-                                        {!! Form::text('search', null , array('placeholder' => 'Search','class' => 'form-control', 'required' => 'required')) !!}
->>>>>>> msearch
+
                                         <button type="submit" class="btn btn-default btn-lg span"><span class="network-name">SEARCH</span></button>
 
 
@@ -37,13 +35,6 @@
                                      </div>
                                 </div>
                             </div>
-
-<!-- 
-                        @foreach($skills as $skill)
-                            <a href="mSpec/{{$skill->title}}" class="btn btn-default btn-lg span"> <span class="network-name">{{$skill->title}}</span></a><br><br>
-                        @endforeach -->
-
-
                         </li>
                         </br>
                         </br>
