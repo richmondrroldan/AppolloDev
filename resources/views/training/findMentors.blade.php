@@ -17,18 +17,28 @@
                                         
 
                                         {!! Form::model($skills, ['method' => 'GET','route' => ['results.index']]) !!}
-                                        {!! Form::text('skill', null, array('placeholder' => 'Search','class' => 'form-control')) !!}
+                                        {!! Form::text('search', null, array('placeholder' => 'Search','class' => 'form-control')) !!}
+
+                                        <strong>Expertise:</strong>
+                                        <select name="skills_title" id="skills_title" class="form-control">
+                                        <option value="">--- Select Expertise ---</option>
+                                        @foreach ($skills as $skill)
+                                        <option value="{{ $skill->title }}">{{ $skill->title }}</option>
+                                        @endforeach
+                                        </select>
                                         <button type="submit" class="btn btn-default btn-lg span"><span class="network-name">SEARCH</span></button>
+
+
                                         {!! Form::close()!!}
 
                                      </div>
                                 </div>
                             </div>
 
-
+<!-- 
                         @foreach($skills as $skill)
                             <a href="mSpec/{{$skill->title}}" class="btn btn-default btn-lg span"> <span class="network-name">{{$skill->title}}</span></a><br><br>
-                        @endforeach
+                        @endforeach -->
 
 
                         </li>
