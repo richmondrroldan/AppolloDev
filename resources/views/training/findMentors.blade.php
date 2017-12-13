@@ -15,8 +15,8 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
                                         
-
                                         {!! Form::model($skills, ['method' => 'GET','route' => ['results.index']]) !!}
+<<<<<<< HEAD
                                         {!! Form::text('search', null, array('placeholder' => 'Search','class' => 'form-control')) !!}
 
                                         <strong>Expertise:</strong>
@@ -26,6 +26,9 @@
                                         <option value="{{ $skill->title }}">{{ $skill->title }}</option>
                                         @endforeach
                                         </select>
+=======
+                                        {!! Form::text('search', null , array('placeholder' => 'Search','class' => 'form-control', 'required' => 'required')) !!}
+>>>>>>> msearch
                                         <button type="submit" class="btn btn-default btn-lg span"><span class="network-name">SEARCH</span></button>
 
 

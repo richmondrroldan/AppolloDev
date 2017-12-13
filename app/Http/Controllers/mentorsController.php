@@ -47,7 +47,7 @@ class mentorsController extends Controller
     public function mDet($id)
     {
         $mentors = Mentor::find($id);
-        return view('mentors.detail', compact('mentors', 'skills'));
+        return view('mentors.detail', compact('mentors'));
     }
 
     /**
