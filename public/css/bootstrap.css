@@ -12,6 +12,9 @@ html {
 .black{
   color: black;
 }
+.fleft{
+  float: left;
+}
 .center{
   text-align: center;
 }
@@ -4994,6 +4997,9 @@ a.badge:focus {
 .jumbotron .container {
   max-width: 100%;
 }
+.container-btm{
+  padding-bottom: 100px;
+}
 @media screen and (min-width: 768px) {
   .jumbotron {
     padding-top: 48px;
@@ -5012,7 +5018,7 @@ a.badge:focus {
 .thumbnail {
   display: block;
   padding: 4px;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
   line-height: 1.42857143;
   background-color: #fff;
   border: 1px solid #ddd;

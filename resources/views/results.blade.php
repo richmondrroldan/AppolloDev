@@ -2,8 +2,30 @@
 @include('templates/nav')
 @section('content')
 	
-	<div class="container">
-		  <div class="row intro-message">
+	<div class="container container-btm">
+		<div class="row intro-message">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<div class="form-group">
+
+					{!! Form::model($skills, ['method' => 'GET','route' => ['results.index']]) !!}
+
+					{!! Form::text('search', null, array('placeholder' => 'Search','class' => 'form-control')) !!}
+
+					<strong>Expertise:</strong>
+					<select name="skills_title" id="skills_title" class="form-control">
+					<option value="">--- Select Expertise ---</option>
+					@foreach ($skills as $skill)
+					<option value="{{ $skill->title }}">{{ $skill->title }}</option>
+					@endforeach
+					</select>
+
+					<button type="submit" class="btn btn-default btn-lg span"><span class="network-name">SEARCH</span></button>
+
+
+					{!! Form::close()!!}
+				</div>
+			</div>
+		</div>
 		  	@foreach($results as $result)
    				<div class="col-md-4">
    					<div class="thumbnail">
