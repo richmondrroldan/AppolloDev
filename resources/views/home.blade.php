@@ -4,7 +4,7 @@
             @section('acontent')
             @include('admin')
             @endsection
-        @elseif(Auth::user()->uType == 0)
+        @elseif(Auth::user()->uType == 2)
             @section('content')
             @include('profile.profile')
             @endsection
