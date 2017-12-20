@@ -17,6 +17,7 @@
                                         
                                         {!! Form::model($skills, ['method' => 'GET','route' => ['results.index']]) !!}
 
+
                                         {!! Form::text('search', null, array('placeholder' => 'Search','class' => 'form-control')) !!}
 
                                         <strong>Expertise:</strong>
