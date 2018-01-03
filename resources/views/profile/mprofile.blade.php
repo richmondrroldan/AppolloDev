@@ -7,7 +7,7 @@
 
         <div class="intro-message  thumbnail row">
             <div class="col-sm-3">
-                xw
+                asdf
             </div>
 
             <div class="col-sm-9">
