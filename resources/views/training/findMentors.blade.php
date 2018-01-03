@@ -16,11 +16,6 @@
                                     <div class="form-group">
                                         
                                         {!! Form::model($skills, ['method' => 'GET','route' => ['results.index']]) !!}
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> login
 
                                         {!! Form::text('search', null, array('placeholder' => 'Search','class' => 'form-control')) !!}
 
@@ -32,12 +27,6 @@
                                         @endforeach
                                         </select>
 
-<<<<<<< HEAD
-=======
-=======
-                                        {!! Form::text('skill', null , array('placeholder' => 'Search','class' => 'form-control', 'required' => 'required')) !!}
->>>>>>> 1c73d7bc9c562d05d74ed7caf991ed22bb82721e
->>>>>>> login
                                         <button type="submit" class="btn btn-default btn-lg span"><span class="network-name">SEARCH</span></button>
 
 
