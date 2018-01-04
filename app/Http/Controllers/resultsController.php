@@ -22,15 +22,17 @@ class resultsController extends Controller
     public function index()
     {
 
+        // $skills = Skill::all();
+        // $search = Input::get('search');
+        // $skills_title = Input::get('skills_title');
+        // $results = User::where('uType', '=', '2')->orWhere('interests', '=', "$skills_title")->
+        //             orWhere('name', 'LIKE', "%$search%")->get();
+        // return view('results', compact('results', 'skills'));
 
-        $skills = Skill::all();
         $search = Input::get('search');
-        $skills_title = Input::get('skills_title');
-        $results = User::where('interests', '=', "$skills_title")->
-                    orWhere('name', 'LIKE', "%$search%")->get();
-
-        return view('results', compact('results', 'skills'));
-
+        $results = User::where('uType', '=', '2')->where('name', 'LIKE', "%$search%")
+                    ->get();
+        return view('results', compact('results'));
 
     }
 

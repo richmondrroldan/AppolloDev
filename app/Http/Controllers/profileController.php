@@ -50,7 +50,7 @@ class profileController extends Controller
     public function show($id)
     {
         $user = User::find($id);
-        return view('profile.profile', compact('user'));
+        return view('profile.index', compact('user'));
     }
 
     /**
