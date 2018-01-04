@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 namespace App\Http\Controllers;
 
@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\rWorkshop;
+use App\rMentor;
 
-class rWorkshopController extends Controller
+class mentorRequestController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,7 @@ class rWorkshopController extends Controller
      */
     public function index()
     {
-
-        return view('training.reqWorkshop');
+        return view('training.menReq');
     }
 
     /**
@@ -26,12 +25,9 @@ class rWorkshopController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function woReq(){
-        return view('training.reqWorkshop');
-    }
     public function create()
     {
-        
+        //
     }
 
     /**
@@ -46,11 +42,11 @@ class rWorkshopController extends Controller
             'name',
             'email',
             'contact' => 'required',
-            'wType' => 'required',
-            'why' => 'required',
+            'expertise' => 'required',
+            'project' => 'required',
             ]);
-        rWorkshop::create($request->all());
-        return redirect()->route('rWorkshop.index')->with('success', 'Request Sent!');
+        rMentor::create($request->all());
+        return redirect()->route('rMentor.index')->with('success', 'Request Sent!');
     }
 
     /**
@@ -72,7 +68,7 @@ class rWorkshopController extends Controller
      */
     public function edit($id)
     {
-        
+        //
     }
 
     /**

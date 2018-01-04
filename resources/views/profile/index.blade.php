@@ -12,8 +12,8 @@
         <h3>{{$user->name}}</h3>
         <p>{{$user->email}}</p>
         <p>{{$user->interests}}</p>
-            </div>
-            <a href="{{route('profile.edit', Auth::user()->id)}}" class="btn btn-default btn-lg"> <span class="network-name">Request Mentorship</span></a>
+        </div>
+            <a href="{{route('rMentor.index')}}" class="btn btn-default btn-lg"> <span class="network-name">Request Mentorship</span></a>
             </div>
         </div>
     </div>

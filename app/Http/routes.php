@@ -38,6 +38,8 @@ Route::resource('aWorkshop', 'adminWorkshopController');
 
 Route::resource('results', 'resultsController');
 
+Route::resource('rMentor', 'mentorRequestController');
+
 Route::get('artCreate', 'articleController@create');
 
 Route::get('/wReq', 'rWorkshopController@woReq');
