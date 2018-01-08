@@ -13,7 +13,7 @@
         <p>{{$user->email}}</p>
         <p>{{$user->interests}}</p>
         </div>
-            <a href="{{route('rMentor.index')}}" class="btn btn-default btn-lg"> <span class="network-name">Request Mentorship</span></a>
+            <a href="{{route('rMentor.show', $user->id)}}" class="btn btn-default btn-lg"> <span class="network-name">Request Mentorship</span></a>
             </div>
         </div>
     </div>

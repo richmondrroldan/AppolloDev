@@ -1,4 +1,4 @@
- <?php
+<?php
 
 namespace App\Http\Controllers;
 
@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\rMentor;
+
+use App\User;
 
 class mentorRequestController extends Controller
 {
@@ -17,7 +19,8 @@ class mentorRequestController extends Controller
      */
     public function index()
     {
-        return view('training.menReq');
+        
+        return view('training');
     }
 
     /**
@@ -44,6 +47,8 @@ class mentorRequestController extends Controller
             'contact' => 'required',
             'expertise' => 'required',
             'project' => 'required',
+            'mentorID',
+            'userID',
             ]);
         rMentor::create($request->all());
         return redirect()->route('rMentor.index')->with('success', 'Request Sent!');
@@ -57,7 +62,8 @@ class mentorRequestController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::find($id);
+        return view('mentorApp.menReq', compact('user'));
     }
 
     /**

@@ -16,6 +16,13 @@
                 <p>{{Auth::user()->interests}}</p>
             </div>
             <a href="{{route('profile.edit', Auth::user()->id)}}" class="btn btn-default btn-lg"> <span class="network-name">Edit Profile</span></a>
+        </br>
+        </br>
+            @if(Auth::user()->uType == 2)
+            <a href="{{route('mApp.show', Auth::user()->id)}}" class="btn btn-default btn-lg"> <span class="network-name">View Mentorship Requests</span></a>
+            @elseif(Auth::user()->uType == 0)
+            <a href="{{route('rWorkshop.show', Auth::user()->id)}}" class="btn btn-default btn-lg"> <span class="network-name">View My Requests</span></a>
+            @endif
         </div>
 
     </div>

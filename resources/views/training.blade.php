@@ -7,6 +7,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="intro-message">
+                    @if ($message = Session::get('success'))
+                        <div class="alert alert-success">
+                            <p>{{ $message }}</p>
+                        </div>
+                    @endif
                     <h3>Welcome to HIFI's training programs.</h3>
                     <hr class="intro-divider">
                     <ul class="list-inline intro-social-buttons">

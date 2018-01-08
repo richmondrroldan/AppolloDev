@@ -19,6 +19,7 @@
             </br>
             <form class="" method="post" action="{{route('rWorkshop.store')}}">
              {{ csrf_field() }}
+             <input type="hidden" value="{{Auth::user()->id}}" for="userID" name="userID" id="userID">
                   <div class="form-group">
                     <label for="email" class="cols-sm-2 control-label">Name</label>
                     <div class="cols-sm-10">

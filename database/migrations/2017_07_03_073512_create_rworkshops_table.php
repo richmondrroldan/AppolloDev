@@ -14,6 +14,7 @@ class CreateRworkshopsTable extends Migration
     {
         Schema::create('r_workshops', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('userID');
             $table->string('name');
             $table->string('email');
             $table->string('contact');

@@ -19,6 +19,9 @@ class CreateRmentorTable extends Migration
             $table->string('contact');
             $table->string('expertise');
             $table->string('project');
+            $table->string('status');
+            $table->integer('mentorID');
+            $table->integer('userID');
             $table->timestamps();
         });
     }

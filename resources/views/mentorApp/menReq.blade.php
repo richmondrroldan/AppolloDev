@@ -17,8 +17,10 @@
         <div class="">
             <h3 class="center">Mentor Request</h3>
             </br>
-            <form class="" method="post" action="{{route('rMentor.store')}}">
+            <form class="" method="post" action="{{route('rMentor.store', $user->id)}}">
              {{ csrf_field() }}
+             <input type="hidden" name="mentorID" id="mentorID" value="{{$user->id}}">
+             <input type="hidden" name="userID" id="userID" value="{{Auth::user()->id}}">
                   <div class="form-group">
                     <label for="email" class="cols-sm-2 control-label">Name</label>
                     <div class="cols-sm-10">
@@ -62,7 +64,8 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                            <input type="textarea" class="form-control" name="project" id="project"  placeholder="Project Description"/>
+                            {!! Form::textarea('project', null, array('placeholder' => 'Project Description','class' => 'form-control')) !!}
+                            
                         </div>
                     </div>
                 </div>
