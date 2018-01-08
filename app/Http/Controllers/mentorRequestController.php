@@ -6,12 +6,11 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\rWorkshop;
-
 use App\rMentor;
 
 use App\User;
-class rWorkshopController extends Controller
+
+class mentorRequestController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,8 +19,8 @@ class rWorkshopController extends Controller
      */
     public function index()
     {
-
-        return view('training.reqWorkshop');
+        
+        return view('training');
     }
 
     /**
@@ -29,12 +28,9 @@ class rWorkshopController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function woReq(){
-        return view('training.reqWorkshop');
-    }
     public function create()
     {
-        
+        //
     }
 
     /**
@@ -49,11 +45,13 @@ class rWorkshopController extends Controller
             'name',
             'email',
             'contact' => 'required',
-            'wType' => 'required',
-            'why' => 'required',
+            'expertise' => 'required',
+            'project' => 'required',
+            'mentorID',
+            'userID',
             ]);
-        rWorkshop::create($request->all());
-        return redirect()->route('rWorkshop.index')->with('success', 'Request Sent!');
+        rMentor::create($request->all());
+        return redirect()->route('rMentor.index')->with('success', 'Request Sent!');
     }
 
     /**
@@ -64,9 +62,8 @@ class rWorkshopController extends Controller
      */
     public function show($id)
     {
-        $workshops = rWorkshop::where('userID' , '=' , $id)->get();
-        $mReq = rMentor::where('userID' , '=' , $id)->get();
-        return view ('workshopreq.show', compact('workshops', 'mReq'));
+        $user = User::find($id);
+        return view('mentorApp.menReq', compact('user'));
     }
 
     /**
@@ -77,7 +74,7 @@ class rWorkshopController extends Controller
      */
     public function edit($id)
     {
-        
+        //
     }
 
     /**

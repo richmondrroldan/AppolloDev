@@ -76,7 +76,7 @@
     </div> 
     <button type="submit" class="btn btn-default btn-lg span"><span class="network-name">Submit</span></button>
     </br>
-    {!! Form::Close( )!!}
+{!! Form::Close( )!!}
         </br>
     <a href="/mentors" class="btn btn-default btn-lg span"> <span class="network-name">Back</span></a>
 </div>

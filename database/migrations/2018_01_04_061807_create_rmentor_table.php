@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRworkshopsTable extends Migration
+class CreateRmentorTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,15 +12,16 @@ class CreateRworkshopsTable extends Migration
      */
     public function up()
     {
-        Schema::create('r_workshops', function (Blueprint $table) {
+        Schema::create('r_mentors', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('userID');
             $table->string('name');
             $table->string('email');
             $table->string('contact');
-            $table->string('wType');
-            $table->string('why');
+            $table->string('expertise');
+            $table->string('project');
             $table->string('status');
+            $table->integer('mentorID');
+            $table->integer('userID');
             $table->timestamps();
         });
     }
@@ -32,6 +33,6 @@ class CreateRworkshopsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('r_workshops');
+        Schema::drop('r_mentors');
     }
 }

@@ -49,7 +49,10 @@ h6 {
     font-size: 18px;
     font-weight: 400;
 }
-
+.small-container{
+  margin-right: -1500px;
+  margin-left: -1500px;
+}
 .intro-header {
     text-align: center;
     color: black;

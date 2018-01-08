@@ -4,7 +4,7 @@
 
 @if(Auth::guest())
 @section('content')
-@include('training/unRegistered')
+@include('training/unRegMenReq')
 @endsection
 @else
 <div style="padding-top: 70px;">
@@ -15,11 +15,12 @@
     @endif
      <div class="container" style="padding-top: -20px;">
         <div class="">
-            <h3 class="center">Workshop Request</h3>
+            <h3 class="center">Mentor Request</h3>
             </br>
-            <form class="" method="post" action="{{route('rWorkshop.store')}}">
+            <form class="" method="post" action="{{route('rMentor.store', $user->id)}}">
              {{ csrf_field() }}
-             <input type="hidden" value="{{Auth::user()->id}}" for="userID" name="userID" id="userID">
+             <input type="hidden" name="mentorID" id="mentorID" value="{{$user->id}}">
+             <input type="hidden" name="userID" id="userID" value="{{Auth::user()->id}}">
                   <div class="form-group">
                     <label for="email" class="cols-sm-2 control-label">Name</label>
                     <div class="cols-sm-10">
@@ -50,20 +51,21 @@
                     </div>
                 </div>
                   <div class="form-group">
-                    <label for="wType" class="cols-sm-2 control-label">Topic of Workshop</label>
+                    <label for="expertise" class="cols-sm-2 control-label">Expertise Needed:</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="wType" id="wType"  placeholder="Topic of Workshop"/>
+                            <input type="text" class="form-control" name="expertise" id="expertise"  placeholder="Expertise Needed"/>
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="why" class="cols-sm-2 control-label">Why?</label>
+                    <label for="project" class="cols-sm-2 control-label">Project Description:</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                            <input type="textarea" class="form-control" name="why" id="why"  placeholder="Why?"/>
+                            {!! Form::textarea('project', null, array('placeholder' => 'Project Description','class' => 'form-control')) !!}
+                            
                         </div>
                     </div>
                 </div>

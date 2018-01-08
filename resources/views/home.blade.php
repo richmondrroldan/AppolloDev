@@ -10,7 +10,7 @@
             @endsection
         @else
         	@section('content')
-            @include('mLanding')
+            @include('profile.profile')
             @endsection
         @endif
 @include('templates/footer')
