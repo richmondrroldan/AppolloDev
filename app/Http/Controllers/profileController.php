@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 use App\User;
 
+use App\Skill;
+
 class profileController extends Controller
 {
     /**
@@ -62,7 +64,8 @@ class profileController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-        return view('profile.edit',compact('user'));
+        $skills = Skill::all();
+        return view('profile.edit',compact('user', 'skills'));
     }
 
     /**
@@ -73,9 +76,14 @@ class profileController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
+    {   
+        $request->merge([ 
+        'interests' => implode(', ', (array) $request->get('interests'))
+        ]);
+        $data['interests'] = $request->input('interests', true);
         $this->validate($request, [
-            'interests' => 'required',
+            'bio' => 'required',
+            'interests',
             ]);
         User::find($id)->update($request->all());
     return redirect()->route('profile.index')->with('success', 'Profile Successfully Edited!');
