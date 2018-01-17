@@ -9,15 +9,24 @@
                 <div class="intro-message">
                     <h3>{{Auth::user()->name}}</h3>
                     <p>{{Auth::user()->email}}</p> 
-                    {!! Form::model($user, ['method' => 'PATCH','route' => ['profile.update', Auth::user()->id]]) !!}
+                    {!! Form::model(Auth::user(), ['method' => 'PATCH','route' => ['profile.update', Auth::user()->id]]) !!}
+                   
                         <div class="form-group">
-                    <div class="cols-sm-10">
-                           <div class="form-group">
-                                <strong>Interests:</strong>
-                                    {!! Form::textarea('interests', null, array('placeholder' => 'Interests','class' => 'form-control')) !!}
-                                </div>
+                            <strong>Tell us about yourself:</strong>
+                                {!! Form::textarea('bio', null, array('placeholder' => 'I am ...','class' => 'form-control')) !!}
                         </div>
+                        <div class="form-group">
+                            <strong>Pick your expertise:</strong>
+                        </br>
+                            @foreach($skills as $skill)     
+                                
+                                {{ Form::checkbox('interests[]', $skill->title, (strpos(Auth::user()->interests, $skill->title) !== FALSE) ? true : false ) }}
+                                {{ Form::label($skill->title) }}
+                                </br>
+                            @endforeach
+                                
                         </div>
+           
               
                             
                         <button type="submit" class="btn btn-default btn-lg span"><span class="network-name">Submit</span></button>
