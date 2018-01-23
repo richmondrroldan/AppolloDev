@@ -9,7 +9,9 @@ use App\Http\Requests;
 use App\Article;
 
 use App\User;
+
 use Illuminate\Support\Facades\Input;
+
 class articleController extends Controller
 {
     /**

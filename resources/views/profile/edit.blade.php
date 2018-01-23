@@ -9,8 +9,8 @@
                 <div class="intro-message">
                     <h3>{{Auth::user()->name}}</h3>
                     <p>{{Auth::user()->email}}</p> 
-                    {!! Form::model(Auth::user(), ['method' => 'PATCH','route' => ['profile.update', Auth::user()->id]]) !!}
-                   
+                    {!! Form::model(Auth::user(), ['method' => 'PATCH','route' => ['profile.update', Auth::user()->id], 'file' => 'multipart/form-data']) !!}
+                    
                         <div class="form-group">
                             <strong>Tell us about yourself:</strong>
                                 {!! Form::textarea('bio', null, array('placeholder' => 'I am ...','class' => 'form-control')) !!}
@@ -24,8 +24,17 @@
                                 {{ Form::label($skill->title) }}
                                 </br>
                             @endforeach
-                                
+                            
+                         <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Profile Picture:</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                    <input type="file" class="form-control" name="profilepic" id="profilepic"/>
+                                </div>
+                            </div>
                         </div>
+                      
            
               
                             
@@ -41,6 +50,7 @@
             </div>
         </div>
     </div>
-</div
+</div>
+
 @include('templates/footer')
 @stop

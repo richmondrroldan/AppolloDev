@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\User;
-
+use Auth;
 use App\Skill;
+
+use Illuminate\Support\Facades\Input;
 
 class profileController extends Controller
 {
@@ -80,13 +82,30 @@ class profileController extends Controller
         $request->merge([ 
         'interests' => implode(', ', (array) $request->get('interests'))
         ]);
-        $data['interests'] = $request->input('interests', true);
+        $data['interests'] = $request->input('interests', true); 
+
+        $user = User::find($id);
+        if(Input::hasFile('profilepic')){
+            $file = Input::file('profilepic');
+            $destinationPath = public_path(). '/images/';
+            $filename = $file->getClientOriginalName();
+            Input::file('profilepic')->move($destinationPath, $filename);
+
+            $user->profilepic = $filename;
+
+        }
+
+
+        $user->save();
+
+
         $this->validate($request, [
             'bio' => 'required',
             'interests',
+            'profilepic'
             ]);
         User::find($id)->update($request->all());
-    return redirect()->route('profile.index')->with('success', 'Profile Successfully Edited!');
+        return redirect()->route('profile.index');
     }
 
     /**

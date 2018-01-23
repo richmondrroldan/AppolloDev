@@ -5,7 +5,7 @@
     <div class="container">
         <div class="intro-message  thumbnail row">
         <div class="col-sm-3">
-        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="200" height="200" border="0" class="img-circle" ahref="">
+        <img src="/images/{{$user->profilepic}}" name="aboutme" width="200" height="200" border="0" class="img-circle" ahref="">
         </div>
 
         <div class="col-sm-9">
