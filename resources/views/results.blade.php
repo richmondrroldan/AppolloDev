@@ -22,7 +22,7 @@
 				<div class="col-md-4">
 					<div class="thumbnail">
 						<div class="center">
-						<a href="{{route('profile.show', $result->id)}}"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" border="0" class="img-circle" ahref=""></a>
+						<a href="{{route('profile.show', $result->id)}}"><img src="/images/{{$result->profilepic}}" name="aboutme" width="200" height="200"  border="0" class="img-circle" ahref=""></a>
 						<h3 class="media-heading">{{$result->name}}</h3>
 						<span><strong>Skills: </strong></span>
 						<span class="label label-warning">{{$result->interests}}</span> 
