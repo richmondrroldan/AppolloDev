@@ -42,6 +42,8 @@ Route::resource('rMentor', 'mentorRequestController');
 
 Route::resource('mApp', 'menteeApprovalController');
 
+Route::get('mRegister', 'userregController@mentorRegister');
+
 Route::get('artCreate', 'articleController@create');
 
 Route::get('/wReq', 'rWorkshopController@woReq');

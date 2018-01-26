@@ -10,9 +10,13 @@
                     <h3>{{Auth::user()->name}}</h3>
                     <p>{{Auth::user()->email}}</p> 
                     {!! Form::model(Auth::user(), ['method' => 'PATCH','route' => ['profile.update', Auth::user()->id], 'file' => 'multipart/form-data']) !!}
+<<<<<<< HEAD
 
                     
 
+=======
+                    {{ csrf_field() }}
+>>>>>>> reg-men-user
                         <div class="form-group">
                             <strong>Tell us about yourself:</strong>
                                 {!! Form::textarea('bio', null, array('placeholder' => 'I am ...','class' => 'form-control')) !!}
