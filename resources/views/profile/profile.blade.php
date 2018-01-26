@@ -7,7 +7,7 @@
 
         <div class="intro-message  thumbnail row">
             <div class="col-sm-3">
-                <img src="/images/{{Auth::user()->profilepic}}" style="width: 300px; height: 300px;">
+                <img src="/images/{{Auth::user()->profilepic}}" style="width: 300px; height: 300px;" class="img-circle">
             </div>
 
             <div class="col-sm-9">
