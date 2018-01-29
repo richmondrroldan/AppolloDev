@@ -9,16 +9,14 @@
                 <div class="intro-message">
                     <h3>{{Auth::user()->name}}</h3>
                     <p>{{Auth::user()->email}}</p> 
-                    {!! Form::model(Auth::user(), ['method' => 'PATCH','route' => ['profile.update', Auth::user()->id], 'file' => 'multipart/form-data']) !!}
-
-                    {{ csrf_field() }}
+                    {!! Form::model(Auth::user(), ['method' => 'PATCH','route' => ['profile.update', Auth::user()->id], 'file' => "multipart/form-data"]) !!}
 
                         <div class="form-group">
                             <strong>Tell us about yourself:</strong>
                                 {!! Form::textarea('bio', null, array('placeholder' => 'I am ...','class' => 'form-control')) !!}
                         </div>
                         <div class="form-group">
-                            <strong>Pick your expertise:</strong>
+                            <strong>Pick your experasdftise:</strong>
                         </br>
                             @foreach($skills as $skill)     
                                 
@@ -35,10 +33,7 @@
                                     <input type="file" class="form-control" name="profilepic" id="profilepic"/>
                                 </div>
                             </div>
-                        </div>
-                      
-           
-              
+                        </div>    
                             
                         <button type="submit" class="btn btn-default btn-lg span"><span class="network-name">Submit</span></button>
                         </br>
