@@ -24,6 +24,8 @@ Route::resource('rWorkshop', 'rWorkshopController');
 
 Route::resource('profile', 'profileController');
 
+Route::post('profile', 'profileController@update_avatar');
+
 Route::resource('articleC', 'articleController');
 
 Route::resource('mentors', 'mentorsController');

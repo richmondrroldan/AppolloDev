@@ -6,16 +6,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/home">MagisAdmin</a>
+        <a class="navbar-brand topnav network-name" href="/home">APPOLLO</a>
     </div>
     <div class="navbar-default sidebar" role="navigation">
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
                 <li>
                     <a href="/home"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                </li>
-                <li>                        
-                    <a href="/mentors"><i class="fa fa-user fa-fw"></i> Mentors</a>
                 </li>
                 <li>                        
                     <a href="/skills"><i class="fa fa-tasks fa-fw"></i> Skills</a>

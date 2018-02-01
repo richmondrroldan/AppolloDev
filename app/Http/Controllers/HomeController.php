@@ -6,7 +6,6 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Profile;
 use App\Skill;
-use App\Mentor;
 use App\Event;
 use App\Article;
 use App\rWorkshop;
@@ -34,11 +33,9 @@ class HomeController extends Controller
         $workshopCount = rWorkshop::count();
         $skillCount = Skill::count();
         $eventCount = Event::count();
-        $mentorCount = Mentor::count();
         $articleCount = Article::count();
         $skills = Skill::all();
-        $mentors = Mentor::all();
-        return view('home', compact('skillCount','mentorCount','eventCount','articleCount','workshopCount', 'skills', 'mentors'));
+        return view('home', compact('skillCount','eventCount','articleCount','workshopCount', 'skills', 'mentors'));
     }
     public function mLanding(){
         $skills = Skill::all();

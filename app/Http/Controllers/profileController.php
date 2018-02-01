@@ -10,6 +10,8 @@ use App\User;
 use Auth;
 use App\Skill;
 
+use Image;
+
 use Illuminate\Support\Facades\Input;
 
 class profileController extends Controller
@@ -19,6 +21,20 @@ class profileController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function update_avatar(Request $request){
+        if($request->hasFile('profilepic')){
+            $profilepic = $request->file('profilepic');
+            $filename = time() . '.' . $profilepic->getClientOriginalExtension();
+            Image::make($profilepic)->resize(300,300)->save(public_path('/images/avatar/' . $filename));
+
+            $user = Auth::user();
+            $user->profilepic = $filename;
+            $user->save(); 
+
+        }
+        return view('profile.profile', array('user' => Auth::user()) );
+    }
     public function index()
     {
         return view('profile.profile');
@@ -84,25 +100,10 @@ class profileController extends Controller
         ]);
         $data['interests'] = $request->input('interests', true); 
 
-        $user = User::find($id);
-        if(Input::hasFile('profilepic')){
-            $file = Input::file('profilepic');
-            $destinationPath = public_path(). '/images/';
-            $filename = $file->getClientOriginalName();
-            Input::file('profilepic')->move($destinationPath, $filename);
-
-            $user->profilepic = $filename;
-
-        }
-
-
-        $user->save();
-
 
         $this->validate($request, [
             'bio' => 'required',
-            'interests',
-            'profilepic'
+            'interests',            
             ]);
         User::find($id)->update($request->all());
         return redirect()->route('profile.index');
