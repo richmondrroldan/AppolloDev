@@ -19,6 +19,13 @@
 
                                         {!! Form::text('search', null, array('placeholder' => 'Search','class' => 'form-control')) !!}
 
+                                        <strong>Expertise:</strong>
+                                            <select name="interests" id="interests" class="form-control">
+                                            <option value=""><--- Select Expertise ---></option>
+                                            @foreach ($skills as $skill)
+                                            <option value="{{ $skill->title }}" name="interests">{{ $skill->title }}</option>
+                                            @endforeach
+                                        </select>
 
                                         <button type="submit" class="btn btn-default btn-lg span"><span class="network-name">SEARCH</span></button>
 

@@ -30,9 +30,11 @@ class resultsController extends Controller
         // return view('results', compact('results', 'skills'));
 
         $search = Input::get('search');
-        $results = User::where('uType', '=', '2')->where('name', 'LIKE', "%$search%")
+        $skills = Skill::all();     
+        $interests = Input::get('interests');
+        $results = User::where('uType', '=', '2')->where('name', 'LIKE', "%$search%")->where('interests', 'LIKE' , "%$interests%")
                     ->get();
-        return view('results', compact('results'));
+        return view('results', compact('results', 'skills'));
 
     }
 
