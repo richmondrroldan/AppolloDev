@@ -9,37 +9,29 @@
                 <div class="intro-message">
                     <h3>{{Auth::user()->name}}</h3>
                     <p>{{Auth::user()->email}}</p> 
-                    {!! Form::model(Auth::user(), ['method' => 'PATCH','route' => ['profile.update', Auth::user()->id], 'file' => "multipart/form-data"]) !!}
+                    {!! Form::model(Auth::user(), ['method' => 'PATCH','route' => ['profile.update', Auth::user()->id]]) !!}
 
                         <div class="form-group">
                             <strong>Tell us about yourself:</strong>
                                 {!! Form::textarea('bio', null, array('placeholder' => 'I am ...','class' => 'form-control')) !!}
                         </div>
+                        @if(Auth::user()->uType == 2)
                         <div class="form-group">
-                            <strong>Pick your experasdftise:</strong>
-                        </br>
-                            @foreach($skills as $skill)     
+                                <strong>Pick your expertise:</strong>
+                            </br>
+                                @foreach($skills as $skill)     
+                                    
+                                    {{ Form::checkbox('interests[]', $skill->title, (strpos(Auth::user()->interests, $skill->title) !== FALSE) ? true : false ) }}
+                                    {{ Form::label($skill->title) }}
+                                    </br>
+                                @endforeach
+                        @endif
                                 
-                                {{ Form::checkbox('interests[]', $skill->title, (strpos(Auth::user()->interests, $skill->title) !== FALSE) ? true : false ) }}
-                                {{ Form::label($skill->title) }}
-                                </br>
-                            @endforeach
-                            
-                         <div class="form-group">
-                            <label for="username" class="cols-sm-2 control-label">Profile Picture:</label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                    <input type="file" class="form-control" name="profilepic" id="profilepic"/>
-                                </div>
-                            </div>
-                        </div>    
-                            
                         <button type="submit" class="btn btn-default btn-lg span"><span class="network-name">Submit</span></button>
                         </br>
                         </br>
                         <a href="/profile" class="btn btn-default btn-lg span"> <span class="network-name">Back</span></a>
-                    </div>
+                        </div>
 
 
                     {!! Form::close() !!}

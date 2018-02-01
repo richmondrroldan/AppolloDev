@@ -7,7 +7,13 @@
 
         <div class="intro-message  thumbnail row">
             <div class="col-sm-3">
-                <img src="/images/{{Auth::user()->profilepic}}" style="width: 300px; height: 300px;" class="img-circle">
+                <img src="/images/avatar/{{Auth::user()->profilepic}}" style="width: 300px; height: 300px;" class="img-circle">
+                 <form enctype='multipart/form-data' action='/profile' method='POST'>
+                <label> Update Profile Pic </label>
+                <input type="file" name="profilepic">
+                {{csrf_field()}}
+                <input type="submit" name="">
+            </form>
             </div>
 
             <div class="col-sm-9">

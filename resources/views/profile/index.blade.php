@@ -5,7 +5,7 @@
     <div class="container">
         <div class="intro-message  thumbnail row">
         <div class="col-sm-3">
-        <img src="/images/{{$user->profilepic}}" name="aboutme" width="200" height="200" border="0" class="img-circle" ahref="">
+        <img src="/images/avatar/{{$user->profilepic}}" name="aboutme" width="200" height="200" border="0" class="img-circle" ahref="">
         </div>
 
         <div class="col-sm-9">

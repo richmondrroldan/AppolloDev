@@ -18,9 +18,6 @@
                     <a href="/home"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                 </li>
                 <li>                        
-                    <a href="/mentors"><i class="fa fa-user fa-fw"></i> Mentors</a>
-                </li>
-                <li>                        
                     <a href="/skills"><i class="fa fa-tasks fa-fw"></i> Skills</a>
                 </li>
                 <li>                        
