@@ -14,10 +14,10 @@
         </div>
     @endif
      <div class="container" style="padding-top: -20px;">
-        <div class="">
+      
             <h3 class="center">Mentor Request</h3>
             </br>
-            <form class="" method="post" action="{{route('rMentor.store', $user->id)}}">
+            <form class="container" method="post" action="{{route('rMentor.store', $user->id)}}">
              {{ csrf_field() }}
              <input type="hidden" name="mentorID" id="mentorID" value="{{$user->id}}">
              <input type="hidden" name="userID" id="userID" value="{{Auth::user()->id}}">
@@ -69,15 +69,18 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
                 </br>
                     <button type="submit" class="btn btn-default btn-lg span"><span class="network-name">Submit</span></button>
                 </br>
                 </br>
-
-                <a href="training" class="btn btn-default btn-lg span"> <span class="network-name">Back</span></a>
-                                        
+                    <a href="{{route('profile.show', $user->id)}}" class="btn btn-default btn-lg span"> <span class="network-name">Back</span></a>
+                
+                </div>                           
             </form>
-        </div>
+        </br>
+        </br>
+        </br>
     </div>
 </div>
 @endif
