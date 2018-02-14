@@ -3,7 +3,88 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
+/* --costum css-- */
+h1{
+    font-family: 'Nunito', sans-serif;
+    font-size: 6em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px black;
+    padding-top: 80px;
+    text-align: center;
 
+}
+h2{
+    font-family: 'Nunito', sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    color: #3A3A3A;
+    text-align: center;
+}
+.programs{
+    background-color: #D3D3D3;
+}
+h3{
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 24px;
+}
+.program1-img{
+    background-image: url(/images/BG/program1.png);
+    background-size: cover; 
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.program2-img{
+    background-image: url(/images/BG/program2.png);
+    background-size: cover; 
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+}
+.programs-header{
+    font-family: 'Nunito', sans-serif;
+    font-size: 6em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px green;
+    padding-top: 40px;
+    text-align: center;
+}
+.header-container{
+
+    width: 800px;
+}
+
+.head-span{
+        color:green;
+}
+
+.header-btns{
+    width: 100%;
+
+}
+.img-header{
+    
+    background-image: url(/images/BG/cover4.jpg);
+    background-size: cover; 
+    background-position: center;
+    height: 700px;
+    width: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    
+}
+.loader{
+    width: 100%;
+}
+
+/* --costum css end-- */
 body,
 html {
     width: 100%;
@@ -13,9 +94,6 @@ html {
 
 
 body,
-h1,
-h2,
-h3,
 h4,
 h5,
 h6 {
@@ -56,6 +134,10 @@ h6 {
 .intro-header {
     text-align: center;
     color: black;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .intro-message {
@@ -110,13 +192,74 @@ h6 {
         font-size: 15px;
     }
 }
+/*Used For Test*/
 @media(max-width:672px){
     .img{
         height: 100%;
         width: 100%;
     }
+    h1{
+        font-size: 3em;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    
+    .intro-header {
+        text-align: center;
+        color: black;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
 
+    }
+    .img-header{
+    padding-top: 20px;
+    background-image: url(/images/BG/cover4.jpg);
+    background-size: cover; 
+    background-position: center;
+    height: 677px;
+    width: auto;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+    }
+    h2{
+    font-family: 'Nunito', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #3A3A3A;
+    text-align: center;
+    }
+    .programs-header{
+    font-family: 'Nunito', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px green;
+    padding-top: 40px;
+    text-align: center;
+    }
+    .program1-img{
+    background-image: url(/images/BG/program1.png);
+    background-size: cover; 
+    background-position: center;
+    height: 150px;
+    width: 150px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    }
+    .program2-img{
+    background-image: url(/images/BG/program2.png);
+    background-size: cover; 
+    background-position: center;
+    height: 150px;
+    width: 150px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    }
 }
+/*End Used For Test*/
+
 @media(max-width:567px){
     .img{
         height: 100%;

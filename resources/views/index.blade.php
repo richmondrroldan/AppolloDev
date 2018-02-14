@@ -1,27 +1,51 @@
 @extends('layout')
 @include('templates/nav')
 @section('content')
+<!-- Header -->
+    <div class="img-header">
+        <h1>WE <span class="head-span">BUILD</span> INNOVATORS MORE THAN THE INNOVATION</h1>
+        </br>
+        </br>
+        </br>
+        </br>
+        <div class="intro-header">
+            <a href="upEvents" class="btn btn-default btn-lg span"> <span class="network-name">Upcoming Events</span></a>
+            </br>
+            </br>
+            <a href="findMentors" class="btn btn-default btn-lg span"> <span class="network-name">Find Mentors</span></a>
+            </br>
+            </br>
+            <a href="wReq" class="btn btn-default btn-lg span"> <span class="network-name">Request Workshop</span></a>
+            </br>
+        </div>
+    </div> 
+<!-- End Header --> 
+<!-- Programs -->
+<div class="programs">
+    <div class="intro-header"> 
+        <span class="programs-header">- PROGRAMS -</span>
+    </div>
+</div>
+<div class="center row">
+    <div class="col-lg-6">
+        <h2>HOMEBREWED</h2>
+        <img class="program1-img">
+        <h3>The internal incubation program of HIFI.</h3>
+        <h3>Click here to read more.</h3>
+    </div>
+    <div class="col-lg-6">
+        <h2>BENILDE PRIZE : BEYOND</h2>
+        <img class="program2-img">
+        <h3>The Benilde Prize : Beyond is the first University based social innovation competition here in the Philippines.</h3>
+        <h3>Click here to read more.</h3>
+    </div>
+</div>
+
+<!-- End Programs -->
+
 <div class="intro-header">
-    <div class="container">
         <div class="col-lg-12">
             <div class="intro-message">
-                <h1 class="network-name">APPOLLO</span> </h1>
-                <h3>Lorem Ipsum</h3>
-                <hr class="intro-divider">
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.</h4>
-                <hr class="intro-divider">
-                <h3>Welcome to HIFI's training programs.</h3>
-                <hr class="intro-divider">
-                <ul class="list-inline intro-social-buttons">
-                <li>
-                <a href="upEvents" class="btn btn-default btn-lg span"> <span class="network-name">Upcoming Events</span></a>
-                </li>
-                <li>
-                <a href="findMentors" class="btn btn-default btn-lg span"> <span class="network-name">Find Mentors</span></a>
-                </li>
-                <li>
-                <a href="wReq" class="btn btn-default btn-lg span"> <span class="network-name">Request Workshop</span></a>
-                </li>  
             <h3 class="center">Recent Events</h3>
 
             @foreach($articles as $article)

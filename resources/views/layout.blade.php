@@ -9,7 +9,7 @@
 	<title>Appollo</title>
 
 	 <!-- Bootstrap Core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/sb-admin-2.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -18,14 +18,15 @@
     <!-- Custom Fonts -->
     <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Poppins" rel="stylesheet">
     @yield('nav')
 </head>
 <body>
     @yield('acontent')
 
-    <div class="container">
-    @yield('content')
-	</div>
+    <div class="loader">@yield('content')</div>
+    
+
     @yield('jsFile')
 @yield('footer')
 </body>

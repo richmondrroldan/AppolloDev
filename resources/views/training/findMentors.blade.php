@@ -3,16 +3,12 @@
 @section('content')
 
 <div class="intro-header">
-    <div class="container">
+    <div class="container" style="padding-top: 80px;">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="intro-message">
                     <h3>What do you need?</h3>
-                    <hr class="intro-divider">
-                    <ul class="list-inline intro-social-buttons">
-                        <li>
+                        
                             <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                
                                     <div class="form-group">
                                         
                                         {!! Form::model($skills, ['method' => 'GET','route' => ['results.index']]) !!}
@@ -33,15 +29,27 @@
                                         {!! Form::close()!!}
 
                                      </div>
-                                </div>
-                            </div>
-                        </li>
+                                @foreach($users as $user)
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <div class="center">
+                        <a href="{{route('profile.show', $user->id)}}"><img src="/images/avatar/{{$user->profilepic}}" name="aboutme" width="200" height="200"  border="0" class="img-circle" ahref=""></a>
+                        <h3 class="media-heading">{{$user->name}}</h3>
+                        <span><strong>Skills: </strong></span>
+                        <span class="label label-warning">{{$user->interests}}</span> 
+                        <br>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+                            
+                        
                         </br>
                         </br>
                         </br>
-                        <li>
-                        <a href="training" class="btn btn-default btn-lg span"> <span class="network-name">Back</span></a>
-                        </li>
+                        
+                        <a href="/" class="btn btn-default btn-lg span"> <span class="network-name">Back</span></a>
+                        
                     </ul>
                 </div>
             </div>

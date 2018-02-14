@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 use App\Skill;
 
+use App\User;
+
 class trainingController extends Controller
 {
     /**
@@ -30,7 +32,8 @@ class trainingController extends Controller
     }
     public function findMentors(){
         $skills = Skill::all();
-        return view('training.findMentors', compact('skills'));
+        $users = User::where('uType', '=', '2')->get();
+        return view('training.findMentors', compact('skills', 'users'));
     }
     public function reqWorkshop(){
         return view('training.reqWorkshop');
