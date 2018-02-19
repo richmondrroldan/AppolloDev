@@ -1,6 +1,7 @@
 @extends('layout')
 @include('templates/nav')
 @section('content')
+  
 <!-- Header -->
     <div class="img-header">
         <h1>WE <span class="head-span">BUILD</span> INNOVATORS MORE THAN THE INNOVATION</h1>
@@ -70,11 +71,10 @@
         </div>
 
     </div>
-    <!-- /.container -->
+ 
 
 </div>
 
-
-    
-@include('templates/footer')
 @stop
+
+  
