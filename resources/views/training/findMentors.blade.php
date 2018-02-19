@@ -4,7 +4,7 @@
 
 <div class="intro-header">
     <div class="container" style="padding-top: 80px;">
-        <div class="row">
+        <div class="row center">
                     <h3>What do you need?</h3>
                         
                             <div class="row">
@@ -13,7 +13,7 @@
                                         
                                         {!! Form::model($skills, ['method' => 'GET','route' => ['results.index']]) !!}
 
-                                        {!! Form::text('search', null, array('placeholder' => 'Search','class' => 'form-control')) !!}
+                                        <input type="" name="search" class="form-control" placeholder="Search">
 
                                         <strong>Expertise:</strong>
                                             <select name="interests" id="interests" class="form-control">
@@ -49,6 +49,8 @@
                         </br>
                         
                         <a href="/" class="btn btn-default btn-lg span"> <span class="network-name">Back</span></a>
+                         </br>
+                        </br>
                         
                     </ul>
                 </div>

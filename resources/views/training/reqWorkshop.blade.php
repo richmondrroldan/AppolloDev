@@ -72,7 +72,7 @@
                 </br>
                 </br>
 
-                <a href="training" class="btn btn-default btn-lg span"> <span class="network-name">Back</span></a>
+                <a href="/" class="btn btn-default btn-lg span"> <span class="network-name">Back</span></a>
                                         
             </form>
         </div>

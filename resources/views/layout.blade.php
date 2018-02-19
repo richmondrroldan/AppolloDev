@@ -23,9 +23,9 @@
 </head>
 <body>
     @yield('acontent')
-
-    <div class="loader">@yield('content')</div>
-    
+    <div class="container">
+        @yield('content')
+    </div>
 
     @yield('jsFile')
 @yield('footer')
