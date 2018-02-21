@@ -11,7 +11,7 @@
     
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="/css/sb-admin-2.css" rel="stylesheet">
     
     <!-- Custom CSS --> 
@@ -33,7 +33,8 @@
 
 
     @yield('jsFile')
-@yield('footer')
+
+    @yield('footer')
 </body>
     
 </html>

@@ -13,7 +13,7 @@ html, body{
 }
 h1{
     font-family: 'Nunito', sans-serif;
-    font-size: 6em;
+    font-size: 8em;
     font-weight: bold;
     color: white;
     text-shadow: 2px 2px black;
@@ -60,7 +60,6 @@ h3{
     font-weight: bold;
     color: white;
     text-shadow: 2px 2px green;
-    padding-top: 40px;
     text-align: center;
 }
 .header-container{
@@ -69,7 +68,7 @@ h3{
 }
 
 .head-span{
-        color:green;
+    color:green;
 }
 
 .header-btns{
@@ -77,11 +76,10 @@ h3{
 
 }
 .img-header{
-    
-    background-image: url(/images/BG/cover4.jpg);
+    background-image: url(/images/BG/img-header.png);
     background-size: cover; 
     background-position: center;
-    height: 700px;
+    height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
     object-fit: cover;
@@ -140,6 +138,7 @@ h6 {
   margin-left: -1500px;
 }
 .intro-header {
+    padding-top: 40px;
     text-align: center;
     color: black;
     width: 800px;
@@ -207,7 +206,8 @@ h6 {
         width: 100%;
     }
     h1{
-        font-size: 3em;
+        padding-top: 100px;
+        font-size: 4em;
         text-align: center;
         padding-bottom: 30px;
     }
@@ -221,11 +221,10 @@ h6 {
 
     }
     .img-header{
-    padding-top: 20px;
-    background-image: url(/images/BG/cover4.jpg);
+    background-image: url(/images/BG/img-header.png);
     background-size: cover; 
     background-position: center;
-    height: 677px;
+    height: 100vh;
     width: auto;
     background-repeat: no-repeat;
     object-fit: cover;
