@@ -9,7 +9,7 @@
                     <hr class="intro-divider">
                     <h4>To request a workshop please register <a href="{{ url('/register') }}">here</a>.</h4>
                     <hr class="intro-divider">
-                     <a href="/training" class="btn btn-default btn-lg span"> <span class="network-name">BACK</span></a><br/> <br/>   
+                     <a href="/" class="btn btn-default btn-lg span"> <span class="network-name">BACK</span></a><br/> <br/>   
                 </div>
             </div>
         </div>

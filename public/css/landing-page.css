@@ -4,13 +4,14 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 /* --costum css-- */
-html, body{
+html, body, section {
     width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden; 
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
+
 h1{
     font-family: 'Nunito', sans-serif;
     font-size: 6em;
@@ -54,9 +55,10 @@ h3{
     object-fit: cover;
 
 }
+
 .programs-header{
     font-family: 'Nunito', sans-serif;
-    font-size: 6em;
+    font-size: 4em;
     font-weight: bold;
     color: white;
     text-shadow: 2px 2px green;
@@ -78,10 +80,10 @@ h3{
 }
 .img-header{
     
-    background-image: url(/images/BG/cover4.jpg);
+    background-image: url(/images/BG/img-header.png);
     background-size: cover; 
     background-position: center;
-    height: 700px;
+    height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
     object-fit: cover;
@@ -165,7 +167,7 @@ h6 {
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 .img{
-        height: 500%;
+        height: 100vh;
         width: 100%;
 }
 
@@ -222,10 +224,10 @@ h6 {
     }
     .img-header{
     padding-top: 20px;
-    background-image: url(/images/BG/cover4.jpg);
+    background-image: url(/images/BG/img-header.png);
     background-size: cover; 
     background-position: center;
-    height: 677px;
+    height: 100vh;
     width: auto;
     background-repeat: no-repeat;
     object-fit: cover;
