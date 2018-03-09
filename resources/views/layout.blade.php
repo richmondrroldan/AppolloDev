@@ -11,10 +11,7 @@
     
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.css" rel="stylesheet">
-<<<<<<< HEAD
 
-=======
->>>>>>> designtry
     <link href="/css/sb-admin-2.css" rel="stylesheet">
     
     <!-- Custom CSS --> 

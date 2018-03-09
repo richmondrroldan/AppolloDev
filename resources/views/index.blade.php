@@ -1,52 +1,33 @@
 @extends('layout')
-
+@extends('templates/nav')
 @section('content')
   
 <!-- Header -->
-<<<<<<< HEAD
-    <div class="img-header">
-
-=======
     <section class="img-header" >
->>>>>>> designtry
+
         <h1>WE <span class="head-span">BUILD</span> INNOVATORS MORE THAN THE INNOVATION</h1>
-        </br>
-        </br>
-        </br>
-        </br>
-<<<<<<< HEAD
-       
-    </div> 
-   
-=======
-        <div class="intro-header">
-            <a href="upEvents" class="btn btn-default btn-lg span"> <span class="network-name">Upcoming Events</span></a>
-            </br>
-            </br>
-            <a href="findMentors" class="btn btn-default btn-lg span"> <span class="network-name">Find Mentors</span></a>
-            </br>
-            </br>
-            <a href="wReq" class="btn btn-default btn-lg span"> <span class="network-name">Request Workshop</span></a>
-            </br>
+        
+        <div class="container" style="margin-top:40vh;">
+            <a href="wReq" class="btn btn-default btn-lg"> <span class="network-name">Request Workshop</span></a>
         </div>
     </section> 
->>>>>>> designtry
+
 <!-- End Header --> 
 <!-- Programs -->
-<div class="programs">
-    <div class="intro-header"> 
+<div>
+    <div class="programs intro-header">
         <span class="programs-header">- PROGRAMS -</span>
     </div>
-</div>
- <div class="intro-header">
-    <a href="upEvents" class="btn btn-default btn-lg span"> <span class="network-name">Upcoming Events</span></a>
-    </br>
-    </br>
-    <a href="findMentors" class="btn btn-default btn-lg span"> <span class="network-name">Find Mentors</span></a>
-    </br>
-    </br>
-    <a href="wReq" class="btn btn-default btn-lg span"> <span class="network-name">Request Workshop</span></a>
-    </br>
+     <div class="intro-header" style="margin-top: 30px; margin-bottom: 30px;">
+            <a href="upEvents" class="btn btn-default btn-lg"> <span class="network-name">Upcoming Events</span></a>
+            </br>
+            </br>
+            <a href="findMentors" class="btn btn-default btn-lg"> <span class="network-name">Find Mentors</span></a>
+            </br>
+            </br>
+            <a href="wReq" class="btn btn-default btn-lg"> <span class="network-name">Request Workshop</span></a>
+            </br>
+        </div>
 </div>
 
 <!-- End Programs -->
