@@ -79,7 +79,7 @@ h3{
 }
 .img-header{
 
-    background-image: url(/images/BG/img-header.png);
+    background-image: url(/images/BG/img-header.jpg);
     background-size: cover; 
     background-position: center;
     height: 100vh;
@@ -225,7 +225,7 @@ h6 {
     }
     .img-header{
 
-    background-image: url(/images/BG/img-header.png);
+    background-image: url(/images/BG/img-header.jpg);
     background-size: cover; 
     background-position: center;
     height: 100vh;
