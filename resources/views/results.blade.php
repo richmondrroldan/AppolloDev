@@ -23,18 +23,21 @@
                 </br>
             
             @foreach($results as $result)
-                    <div class="col-md-4">
-                        <div class="thumbnail">
-                            <div class="center">
-                            <a href="{{route('profile.show', $result->id)}}"><img src="/images/avatar/{{$result->profilepic}}" name="aboutme" width="200" height="200"  border="0" class="img-circle" ahref=""></a>
-                            <h3 class="media-heading">{{$result->name}}</h3>
-                            <span><strong>Skills: </strong></span>
-                            <span class="label label-warning">{{$result->interests}}</span> 
-                            
+                    <div class="intro-header">
+                        <div class="container">
+                            <div class="intro-message  thumbnail row">
+                                <div class="col-sm-3">
+                                    <a href="{{route('profile.show', $result->id)}}"><img src="/images/avatar/{{$result->profilepic}}" name="aboutme" width="200" height="200"  border="0" class="img-circle" ahref=""></a>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3>{{$result->name}}</h3>
+                                    <p>Skills:</p>
+                                    <p class="label label-warning">{{$result->interests}}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    @endforeach
+            @endforeach
                 
 
                 <a href="/" class="btn btn-default btn-lg span"> <span class="network-name">Back</span></a>
