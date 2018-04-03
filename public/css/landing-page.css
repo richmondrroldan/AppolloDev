@@ -15,6 +15,9 @@ html, body, section {
 h1.head{
     padding-top: 3em;
 }
+section.eventprog{
+        height: 80vh;
+    }
 h1{
     font-family: 'Nunito', sans-serif;
     font-size: 6em;
