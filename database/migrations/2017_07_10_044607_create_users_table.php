@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique()->nullable();
             $table->integer('uType');
             $table->string('password');
+            $table->string('background');
             $table->string('interests');
             $table->string('bio');
             $table->string('profilepic')->default('default.png');

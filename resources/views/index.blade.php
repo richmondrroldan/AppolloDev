@@ -59,7 +59,7 @@
 </section>
 <!-- End News -->
  
-@include('templates/footer')
+
 @stop
 
   

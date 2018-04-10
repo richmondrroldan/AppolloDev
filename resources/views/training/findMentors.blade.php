@@ -2,7 +2,7 @@
 @include('templates/nav')
 @section('content')
 
-<section class="searchspan">
+<section class="container" style="padding-top: 50px;">
     <div class="center"> 
     <h3>What do you need?</h3>
     <div class="form-group" style="padding-bottom: 50px;">
@@ -21,20 +21,23 @@
                 {!! Form::close()!!}
                 </br>
                 </br>
-            
+            <div class="row">
             @foreach($users as $user)
-                <div class="col-md-4">
+                <div class="col-sm-4" style="height: 400px;">
                     <div class="thumbnail">
                         <div class="center">
                         <a href="{{route('profile.show', $user->id)}}"><img src="/images/avatar/{{$user->profilepic}}" name="aboutme" width="200" height="200"  border="0" class="img-circle" ahref=""></a>
                         <h3 class="media-heading">{{$user->name}}</h3>
-                        <span><strong>Skills: </strong></span>
+                        <strong>Background: </strong>
+                        <h4 class="network-name">{{$user->background}}</h4>
+                        <strong>Expertise: </strong>
                         <span class="label label-warning">{{$user->interests}}</span> 
-                        <br>
                         </div>
                     </div>
                 </div>
             @endforeach
+                    
+            </div>
                             
                 
 
@@ -46,3 +49,4 @@
 
 @include('templates/footer')
 @stop
+
