@@ -38,7 +38,7 @@ return [
     'google' => [
     'client_id' => '183917881239-7etlr2hgd60qr291as0r7u8mve1qb362.apps.googleusercontent.com',
     'client_secret' => 'TffMKzx5KuqPUxCxRKROl92O',
-    'redirect' => 'http://localhost:8000/callback',
+    'redirect' => 'http://testapp-appollo.herokuapp.com/callback',
     ],
 
 ];
