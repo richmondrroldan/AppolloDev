@@ -15,8 +15,7 @@ return [
     */
 
     'mailgun' => [
-        'domain' => 'testapp-appollo.herokuapp.com
-',
+        'domain' => 'testapp-appollo.herokuapp.com',
         'secret' => 'key-1d342e4c1b8a90275288c2647ee0c620',
     ],
 
