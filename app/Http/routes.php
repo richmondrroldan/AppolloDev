@@ -14,7 +14,7 @@ Route::get('/', 'articleController@main');
 
 Route::auth();
 
-Route::get('send_test_email', function(){
+Route::get('/send_test_email', function(){
 	Mail::raw('Sending emails with Mailgun and Laravel is easy!', function($message)
 	{
 		$message->to('richmondrroldan@gmail.com');
