@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('background')->nullable();
             $table->string('interests')->nullable();
             $table->string('bio')->nullable();
-            $table->string('profilepic')->default('default.png')->nullable();
+            $table->string('profilepic')->default('default.png');
             $table->rememberToken();
             $table->timestamps();
         });

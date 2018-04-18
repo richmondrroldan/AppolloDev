@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'mail@yourdomain.com', 'name' => 'AppName'],
+    'from' => ['address' => 'app@appollo.com', 'name' => 'APPOLLO'],
 
     /*
     |--------------------------------------------------------------------------
