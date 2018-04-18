@@ -20,7 +20,7 @@ class CreateRworkshopsTable extends Migration
             $table->string('contact');
             $table->string('wType');
             $table->string('why');
-            $table->string('status')->nullable();
+            $table->string('status')->default('In-Progress');
             $table->timestamps();
         });
     }
