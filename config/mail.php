@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'driver' => 'mailgun',
+    'driver' => env('MAIL_DRIVER', 'mailgun'),
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => 'smtp.mailgun.org',
+    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,7 +42,8 @@ return [
     |
     */
 
-    'port' => 587,
+    'port' => env('MAIL_PORT', 587),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -54,10 +55,11 @@ return [
     | used globally for all e-mails that are sent by your application.
     |
     */
+    'from' => [
+        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+        'name' => env('MAIL_FROM_NAME', 'Example'),
+        ],
 
-    'from' => array('address' => 'hello@example.com',
-    'name' => 'Example'),
-],
 
     /*
     |--------------------------------------------------------------------------
@@ -70,7 +72,7 @@ return [
     |
     */
 
-    'encryption' => 'tls',
+    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
 
     /*
     |--------------------------------------------------------------------------
@@ -83,7 +85,7 @@ return [
     |
     */
 
-    'username' => null,
+    'username' => env('MAIL_USERNAME'),
 
     /*
     |--------------------------------------------------------------------------
@@ -96,7 +98,7 @@ return [
     |
     */
 
-    'password' => null,
+    'password' => env('MAIL_PASSWORD'),
 
     /*
     |--------------------------------------------------------------------------
