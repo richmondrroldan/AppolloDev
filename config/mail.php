@@ -85,7 +85,7 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => env('MAIL_USERNAME', 'postmaster@testapp-appollo.herokuapp.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -98,7 +98,7 @@ return [
     |
     */
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => env('MAIL_PASSWORD', 'c45f4f92d3b31335a0397680233b2c00-4497bd1d-cf9980d3'),
 
     /*
     |--------------------------------------------------------------------------
