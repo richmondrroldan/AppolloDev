@@ -22,6 +22,8 @@ Route::get('/callback','SocialAuthController@googleCallback');
 
 Route::resource('rWorkshop', 'rWorkshopController');
 
+Route::resource('changePass', 'cpController');
+
 Route::resource('profile', 'profileController');
 
 Route::post('profile', 'profileController@update_avatar');
@@ -43,6 +45,8 @@ Route::resource('results', 'resultsController');
 Route::resource('rMentor', 'mentorRequestController');
 
 Route::resource('mApp', 'menteeApprovalController');
+
+Route::get('changePW', 'cpController@changePW');
 
 Route::get('mRegister', 'userregController@mentorRegister');
 
