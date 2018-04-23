@@ -23,6 +23,7 @@
             </div>
             <a href="{{route('profile.edit', Auth::user()->id)}}" class="btn btn-default btn-lg"> <span class="network-name">Edit Profile</span></a>
         </br>
+            <a href="{{route('changePass.edit', Auth::user()->id)}}" class="btn btn-default btn-lg"> <span class="network-name"> CHANGE PASSWORD </span></a>
         </br>
             <a href="findMentors" class="btn btn-default btn-lg"> <span class="network-name">Find Mentors</span></a>
         </br>
