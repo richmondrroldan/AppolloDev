@@ -14,5 +14,5 @@
         @include('events.eForm')
     {!! Form::close() !!}
 
-@include('templates/footer')
+
 

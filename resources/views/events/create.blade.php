@@ -13,4 +13,4 @@
     {!! Form::open(array('route' => 'events.store','method'=>'POST')) !!}
          @include('events.aForm')
     {!! Form::close() !!}
-@include('templates/footer')
+

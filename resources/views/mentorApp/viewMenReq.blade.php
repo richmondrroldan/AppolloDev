@@ -44,5 +44,5 @@
 {!! Form::Close( )!!}    
     <a type="button" class="btn btn-default btn-lg span" id="dtBtn" href="{{route('mApp.show', Auth::user()->id)}}"><span class="network-name">BACK</span></a>
 </div>
-@include('templates/footer')
+
 @stop

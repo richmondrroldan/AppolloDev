@@ -85,5 +85,5 @@
 </div>
 @endif
 
-@include('templates/footer')
+
 @stop

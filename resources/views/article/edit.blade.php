@@ -42,5 +42,5 @@
 
 
     {!! Form::close() !!}
-@include('templates/footer')
+
 @stop

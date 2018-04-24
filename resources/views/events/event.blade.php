@@ -21,5 +21,5 @@
 
 
 
-@include('templates/footer')
+
 @stop

@@ -5,7 +5,7 @@
 <div style="padding-top: 80px;">
     <div class="well center">
         <div class="media span">
-        <div class="container"><img class="img" src="images/{{$article->name}}"></div>
+        <div class="container"><img class="img" src="images/articles/{{$article->name}}"></div>
         
             <div class="media-body">
                 <h4 class="media-heading">{{$article->title}}</h4>
@@ -21,5 +21,5 @@
 </div>
 @endforeach	
 
-@include('templates/footer')
+
 @stop

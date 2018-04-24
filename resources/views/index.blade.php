@@ -46,11 +46,11 @@
            
             @foreach($articles as $article)
                 <div class="well">
-                        <a href="/{{$article->id}}"><img src="images/{{$article->name}}" style="width: 200px; height: 200px; padding-top: 10px;" class="img-circle"></a>
+                        <a href="{{$article->link}}" target="_blank"><img src="images/articles/{{$article->name}}" style="width: 200px; height: 200px; padding-top: 10px;" class="img-circle"></a>
                         <h4 class="media-heading">{{$article->title}}</h4>
                         <p class="center">{{$article->description}} </p>
                    </div>
-                    </br>
+                </br>
 
                   
             @endforeach 

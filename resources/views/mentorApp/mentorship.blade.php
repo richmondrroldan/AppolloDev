@@ -34,5 +34,5 @@
     </div>
 
 
-@include('templates/footer')
+
 @stop

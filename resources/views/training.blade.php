@@ -36,6 +36,6 @@
         </div>
     </div>
 </div>
-@include('templates/footer')
+
 @stop
 

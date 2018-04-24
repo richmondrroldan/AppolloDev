@@ -21,20 +21,27 @@
                 {!! Form::close()!!}
                 </br>
                 </br>
+            
             <div class="row">
             @foreach($users as $user)
-                <div class="col-sm-4" style="height: 400px;">
+                <div class="col-sm-4" style="height: 470px;">
                     <div class="thumbnail">
-                        <div class="center">
-                        <a href="{{route('profile.show', $user->id)}}"><img src="/images/avatar/{{$user->profilepic}}" name="aboutme" width="200" height="200"  border="0" class="img-circle" ahref=""></a>
+                        
+
+                        <div class="center" style="height: 450px">
+                            <img src="/images/avatar/{{$user->profilepic}}" name="aboutme" width="200" height="200" border="0" class="img-circle" ahref="" class="col-sm-3">  
+                        
+                        <a href="{{route('profile.show', $user->id)}}" >                    
                         <h3 class="media-heading">{{$user->name}}</h3>
+                        </a> 
                         <strong>Background: </strong>
                         <h4 class="network-name">{{$user->background}}</h4>
                         <strong>Expertise: </strong>
-                        <span class="label label-warning">{{$user->interests}}</span> 
+                        <p>{{$user->interests}}</p> 
+                        
                         </div>
                     </div>
-                </div>
+                </div>           
             @endforeach
                     
             </div>
@@ -47,6 +54,5 @@
 
 </section>
 
-@include('templates/footer')
 @stop
 

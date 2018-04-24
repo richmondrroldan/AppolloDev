@@ -2,7 +2,7 @@
 @include('templates/nav')
 @section('content')
 
-<section class="searchspan">
+<section class="container" style="padding-top: 80px;">
     <div class="center"> 
     <h3>What do you need?</h3>
     <div class="form-group" style="padding-bottom: 50px;">
@@ -22,22 +22,26 @@
                 </br>
                 </br>
             
+            <div class="row">
             @foreach($results as $result)
-                    <div class="intro-header">
-                        <div class="container">
-                            <div class="intro-message  thumbnail row">
-                                <div class="col-sm-3">
-                                    <a href="{{route('profile.show', $result->id)}}"><img src="/images/avatar/{{$result->profilepic}}" name="aboutme" width="200" height="200"  border="0" class="img-circle" ahref=""></a>
-                                </div>
-                                <div class="col-sm-9">
-                                    <h3>{{$result->name}}</h3>
-                                    <p>Skills:</p>
-                                    <p class="label label-warning">{{$result->interests}}</p>
-                                </div>
-                            </div>
+                <div class="col-sm-4" style="height: 470px;">
+                    <div class="thumbnail">
+                        <div class="center" style="height: 450px">
+                            <img src="/images/avatar/{{$result->profilepic}}" name="aboutme" width="200" height="200" border="0" class="img-circle" ahref="" class="col-sm-3">                          
+                        <a href="{{route('profile.show', $result->id)}}" >                    
+                        <h3 class="media-heading">{{$result->name}}</h3>
+                        </a> 
+                        <strong>Background: </strong>
+                        <h4 class="network-name">{{$result->background}}</h4>
+                        <strong>Expertise: </strong>
+                        <p>{{$result->interests}}</p> 
+                        
                         </div>
                     </div>
+                </div>           
             @endforeach
+                    
+            </div>
                 
 
                 <a href="/" class="btn btn-default btn-lg span"> <span class="network-name">Back</span></a>
@@ -46,5 +50,5 @@
 
 </section>
 
-@include('templates/footer')
+
 @stop

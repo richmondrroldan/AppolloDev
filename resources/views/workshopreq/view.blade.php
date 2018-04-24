@@ -36,5 +36,5 @@
     <div class="pull-right">
         <a class="btn btn-success" href="/home"> Back</a>
     </div>
-@include('templates/footer')
+
 @stop

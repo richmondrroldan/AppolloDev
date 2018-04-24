@@ -13,4 +13,4 @@
             @include('profile.profile')
             @endsection
         @endif
-@include('templates/footer')
+
