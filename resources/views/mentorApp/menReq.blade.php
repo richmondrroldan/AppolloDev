@@ -21,6 +21,7 @@
              {{ csrf_field() }}
              <input type="hidden" name="mentorID" id="mentorID" value="{{$user->id}}">
              <input type="hidden" name="userID" id="userID" value="{{Auth::user()->id}}">
+             <input type="hidden" name="status" id="status" value="In-Progress">
                   <div class="form-group">
                     <label for="email" class="cols-sm-2 control-label">Name</label>
                     <div class="cols-sm-10">
