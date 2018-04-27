@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
-    public $fillable = ['interests','bio'];
+    public $fillable = ['interests','about'];
 
     public function user(){
     	$this->belongsTo(User::class);

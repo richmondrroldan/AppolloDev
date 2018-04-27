@@ -55,7 +55,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="expertise" id="expertise"  placeholder="Expertise Needed"/>
+                            <input type="label" class="form-control" name="expertise" id="expertise"  placeholder="Expertise Needed"/>
                         </div>
                     </div>
                 </div>

@@ -24,17 +24,18 @@
             
             <div class="row">
             @foreach($results as $result)
-                <div class="col-sm-4" style="height: 470px;">
+                <div class="col-sm-4" style="height: 370px;">
                     <div class="thumbnail">
-                        <div class="center" style="height: 450px">
-                            <img src="/images/avatar/{{$result->profilepic}}" name="aboutme" width="200" height="200" border="0" class="img-circle" ahref="" class="col-sm-3">                          
+                        <div class="center" style="height: 350px">
+                            <img src="/images/avatar/{{$result->profilepic}}" name="aboutme" width="200" height="200" border="0" class="img-circle" ahref="" class="col-sm-3">         
+                            <br />                 
                         <a href="{{route('profile.show', $result->id)}}" >                    
                         <h3 class="media-heading">{{$result->name}}</h3>
                         </a> 
-                        <strong>Background: </strong>
+                        
                         <h4 class="network-name">{{$result->background}}</h4>
-                        <strong>Expertise: </strong>
-                        <p>{{$result->interests}}</p> 
+                        
+                        <p>{{$result->company}}</p> 
                         
                         </div>
                     </div>

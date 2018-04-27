@@ -24,20 +24,19 @@
             
             <div class="row">
             @foreach($users as $user)
-                <div class="col-sm-4" style="height: 470px;">
+                <div class="col-sm-4" style="height: 370px;">
                     <div class="thumbnail">
                         
 
-                        <div class="center" style="height: 450px">
+                        <div class="center" style="height: 350px">
                             <img src="/images/avatar/{{$user->profilepic}}" name="aboutme" width="200" height="200" border="0" class="img-circle" ahref="" class="col-sm-3">  
-                        
-                        <a href="{{route('profile.show', $user->id)}}" >                    
+                        <br />
+                        <a href="{{route('profile.show', $user->id)}}" >                    <br />
                         <h3 class="media-heading">{{$user->name}}</h3>
                         </a> 
-                        <strong>Background: </strong>
+                        
                         <h4 class="network-name">{{$user->background}}</h4>
-                        <strong>Expertise: </strong>
-                        <p>{{$user->interests}}</p> 
+                        <p>{{$user->company}}</p> 
                         
                         </div>
                     </div>

@@ -100,9 +100,9 @@ class profileController extends Controller
         ]);
         $data['interests'] = $request->input('interests', true); 
 
-
+        $about = $request->input('about');
         $this->validate($request, [
-            'bio' => 'required',
+            'about',
             'interests',            
             ]);
         User::find($id)->update($request->all());

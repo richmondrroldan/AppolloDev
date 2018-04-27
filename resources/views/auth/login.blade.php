@@ -53,7 +53,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-sign-in"></i> Login
                                 </button>
-                                <a href="/redirect">G+</a>
+                                <a href="/redirect" class="btn btn-default">Log in with <span class="fa fa-google-plus"></span></a>
                                 <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
                             </div>
                         </div>

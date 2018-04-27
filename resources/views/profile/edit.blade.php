@@ -13,7 +13,7 @@
 
                         <div class="form-group">
                             <strong>Tell us about yourself:</strong>
-                                {!! Form::textarea('bio', null, array('placeholder' => 'I am ...','class' => 'form-control')) !!}
+                                <textarea class="form-control" name="about" placeholder="I am..."></textarea>
                         </div>
                         @if(Auth::user()->uType == 2)
                         <div class="form-group">

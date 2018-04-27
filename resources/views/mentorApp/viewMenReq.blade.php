@@ -2,7 +2,7 @@
 @include('templates/nav')
 @section('content')
 {!! Form::model($mReq, ['method' => 'PATCH','route' => ['mApp.update', $mReq->id]]) !!}
-<div class="intro-message">
+<div class="container" style="padding-top: 50px;">
      @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
@@ -25,7 +25,7 @@
             {{$mReq->expertise}} 
         </div>
         <div class="form-group">
-            <strong>Workshop Type:</strong>
+            <strong>Project:</strong>
             {{$mReq->project}} 
         </div>
         <div class="form-group">
@@ -39,7 +39,8 @@
         </div>
 </div>    
     <button type="submit" class="btn btn-default btn-lg span"><span class="network-name">Submit</span></button>
-    
+    </br>
+    </br>
 
 {!! Form::Close( )!!}    
     <a type="button" class="btn btn-default btn-lg span" id="dtBtn" href="{{route('mApp.show', Auth::user()->id)}}"><span class="network-name">BACK</span></a>
