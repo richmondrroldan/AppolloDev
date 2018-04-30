@@ -18,7 +18,7 @@
             <div class="col-sm-9">
                 <h3>{{Auth::user()->name}}</h3>
                 <p>{{Auth::user()->email}}</p>
-                <p>]{{Auth::user()->background}}</p>
+                <p>{{Auth::user()->background}}</p>
                 <p>{{Auth::user()->interests}}</p>
                 <p>{{Auth::user()->company}}</p>
                 </br>

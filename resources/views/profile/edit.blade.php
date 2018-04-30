@@ -15,6 +15,12 @@
                             <strong>Tell us about yourself:</strong>
                                 <textarea class="form-control" name="about" placeholder="I am..."></textarea>
                         </div>
+
+                        
+                        <div class="form-group">
+                            <strong>Affiliation:</strong>
+                                <textarea class="form-control" name="company" placeholder="I am..."></textarea>
+                        </div>
                         @if(Auth::user()->uType == 2)
                         <div class="form-group">
                                 <strong>Pick your expertise:</strong>
